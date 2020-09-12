@@ -1,0 +1,139 @@
+body{
+	background-color: #e6e6e6;
+}
+.container{
+	width: 800px;
+	height: 500px;
+	display: grid;
+	grid-template-columns: 30% 70%;
+	grid-template-rows: 10% auto 10%;
+	grid-template-areas: 
+	'menubar crossbar'
+	'chatroom message'
+	'addbox chatbox';
+	box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+	font-family: 'Montserrat', sans-serif;
+	z-index: 1000;
+
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.container .menu-bar{
+	grid-area: menubar;
+	box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+	/*text-align: center;
+	padding-top: 10px;*/
+	
+	background: #E24727;
+	
+
+}
+small{
+	font-size: 10px;
+}
+.center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container .menu-bar input,.add-box input{
+	/*transform: translateY(-50%);*/
+	width: 200px;
+	height: 20px;
+	border:none;
+	background: #E24727;
+	color:white;
+	border-bottom: 1px solid white;
+	font-family: 'Montserrat', sans-serif;
+}
+input::placeholder{
+	color:white;
+	font-size: 10px;
+}
+.container .chat-box input::placeholder{
+	color:gray;
+	font-size: 13px;
+}
+input:focus{
+	outline: none;
+}
+.container .chat-room{
+	grid-area: chatroom;
+	box-shadow: 0 1px 4px rgba(255,255,255, 0.8);
+	/*background: #E24727;*/
+	background: #E24727;
+	color: white;
+	overflow: scroll;
+}
+.container .chat-room div{
+	width: 100%;
+	height: 40px;
+	/*text-align: center;*/
+	padding:0 10px 0 10px;
+	line-height: 40px;
+	color: #dfdfe2;
+	overflow: hidden;
+
+}
+
+i{
+	color: white;
+}
+.container .chat-room div:hover{
+	background: #E57953;
+}
+.container .add-box{
+	grid-area: addbox;
+	background: #E24727;
+	
+	color: white;
+	
+}
+.container .cross-bar{
+	grid-area: crossbar;
+	background: #DFDFE2;
+	cursor: all-scroll;
+
+}
+.container .show-message{
+	grid-area:message;
+	overflow: scroll;
+	padding: 20px 20px;
+	background-color: white;
+
+}
+.container .show-message .show-message-item{
+	max-width: 510px;
+	width:fit-content;
+	height:fit-content;
+	background: #E24727;
+	color: white;
+	margin-bottom: 10px;
+	padding: 5px 5px;
+	list-style: none;
+	/*line-height: 20px;*/
+	border-radius: 2px;
+	word-wrap: break-word;
+	font-size: 13px;
+}
+.container .show-message .show-message-item{
+	
+}
+.container .chat-box input{
+	width: 400px;
+	height: 25px;
+	border:none;
+	color:black;
+	border-bottom: 1px solid white;
+	font-family: 'Montserrat', sans-serif;
+	border-radius: 5px;
+}
+.container .chat-box{
+	grid-area: chatbox;
+	box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+	background: #DFDFE2;
+	
+
+}
